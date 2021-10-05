@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="row">
+    {% for staff in staffs%}
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">staff.name</h5>
+            <div class="card-body">
+            <h5 class="card-title">staff.role</h5>
+            <p class="card-text">staff.rollNo</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
