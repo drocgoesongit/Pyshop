@@ -3,7 +3,7 @@
 ## Using Django Bootstrap
 
 ## Task Completed
-* sign up done 
+* sign up
 
 ## Pending Task
 * File input
