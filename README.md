@@ -16,3 +16,6 @@
 ## Errors and Bugs
 * login 
 
+## This github repo now also supports Discussions
+We can discuss about the repo here only.
+
