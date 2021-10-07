@@ -6,12 +6,15 @@ from django.contrib.auth import authenticate, login, logout
 
 
 def index(request):
-    staffs = Staff.objects.all()
-    return render(request, 'index.html', {'staff': staffs})
+    return render(request, 'getStarted.html')
 
 
-def profile(request):
-    return render(request, 'index.html')
+def home(request):
+    return render(request, 'home.html')
+
+
+def getStarted(request):
+    return render(request, 'getStarted.html')
 
 
 def loginPage(request):
