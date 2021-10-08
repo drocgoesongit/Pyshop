@@ -4,9 +4,9 @@
 
 ## Task Completed
 * sign up
+* file input
 
 ## Pending Task
-* File input
 * Database Integration
 * Python Script Integration
 * Display Output Activity
