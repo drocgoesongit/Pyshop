@@ -5,3 +5,7 @@ class Staff(models.Model):
     name = models.CharField(max_length=255)
     role = models.CharField(max_length=300)
     rollNo = models.IntegerField()
+
+
+class Resumes(models.Model):
+    file = models.FileField()

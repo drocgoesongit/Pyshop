@@ -9,15 +9,18 @@
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <!--    personal css -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
-
+         h1{
+font-family: 'Montserrat', sans-serif;
+font-weight: 1000;
+ }
     </style>
 
 </head>
 <body>
 
 <!--Nav bar from bootstrap with shadows-->
-
 <div class="shadow bg-white">
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,12 +42,15 @@
 <!-- Navbar ends -->
 
 <h1 class="m-5">
-    <p class="text-center">To add file adding functionality.</p>
-</h1>
-<h1 class="m-5">
-    <p class="text-center">Also to add intro of how website will work.</p>
+    <p class="text-center">Drop your files here for parsing.</p>
 </h1>
 
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="files" >
+    <br>
+    <button class="m-3 btn btn-primary btn-lg btn-block">Send to parser.</button>
+</form>
 
 </body>
 </html>

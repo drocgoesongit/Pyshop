@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import Staff
+from django.shortcuts import render, redirect, HttpResponse
+from .models import Staff, Resumes
 from .forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -10,6 +10,14 @@ def index(request):
 
 
 def home(request):
+    if request.method == "POST":
+        files = request.FILES["files"]
+
+        document = Resumes.objects.create(file=files)
+        document.save()
+        return redirect('parserOutput')
+
+
     return render(request, 'home.html')
 
 
@@ -53,3 +61,7 @@ def register(request):
 
     context = {'form': form}
     return render(request, "register.html", context)
+
+
+def parser(request):
+    return render(request, 'parserPage.html')
